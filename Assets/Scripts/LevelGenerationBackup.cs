@@ -12,7 +12,7 @@ public class LevelGenerationBackup : MonoBehaviour {
     private float timeBetweenRoom;
     public float startTimeBetweenRoom = 0.25f; //Call move() every x seconds
 
-    private bool stopGeneration;
+    public bool stopGeneration;
 
     //minX is where it starts in terms of x,y coords
     //maxX and minY are the number of rooms you want in that direction
