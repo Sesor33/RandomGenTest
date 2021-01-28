@@ -660,6 +660,8 @@ MonoBehaviour:
   - {fileID: 7716347267058047449, guid: 7b8edddef55e19d4883dbf9b99cf37bb, type: 3}
   - {fileID: 6206056225398441927, guid: ff2def0ee0289ab44942f8ac24d07cfe, type: 3}
   - {fileID: 1942274869036652166, guid: 294f4a02491b8734db5f9392d9ac6929, type: 3}
+  specialTiles:
+  - {fileID: 4752549802563774160, guid: 4432a40698bda6e49a3c80d7df1fc3cb, type: 3}
   moveAmount: 10
   startTimeBetweenRoom: 0.25
   stopGeneration: 0

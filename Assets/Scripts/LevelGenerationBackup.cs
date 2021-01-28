@@ -5,6 +5,7 @@ using UnityEngine;
 public class LevelGenerationBackup : MonoBehaviour {
     public Transform[] startingPositions;
     public GameObject[] rooms; // 0 -> LR, 1 -> LRB, 2 -> LRT, 3 -> LRTB
+    public GameObject[] specialTiles;
 
     private int direction;
     public float moveAmount;
@@ -85,7 +86,7 @@ public class LevelGenerationBackup : MonoBehaviour {
                 Vector2 newPos = new Vector2(transform.position.x - moveAmount, transform.position.y);
                 transform.position = newPos;
 
-                int rand = Random.Range(0, rooms.Length);
+                int rand = Random.Range(0, rooms.Length); 
                 Instantiate(rooms[rand], transform.position, Quaternion.identity);
 
                 direction = Random.Range(3, 6); //Force generator to go left or down
@@ -134,6 +135,7 @@ public class LevelGenerationBackup : MonoBehaviour {
             else {
                 //STOP GEN, place exit
                 stopGeneration = true;
+                Instantiate(specialTiles[0], transform.position, Quaternion.identity); //Spawn exit
             }
 
 
