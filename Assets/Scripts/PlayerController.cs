@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
 
     public float playerSpeed;
     Rigidbody2D rig;
+
+    public Text collectedScore;
+    public static int numBits = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -21,5 +25,6 @@ public class PlayerController : MonoBehaviour
         float v = Input.GetAxis("Vertical");
 
         rig.velocity = new Vector3(h * playerSpeed, v * playerSpeed, 0);
+        collectedScore.text = "Bits: " + numBits;
     }
 }
